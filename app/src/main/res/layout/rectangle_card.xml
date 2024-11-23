@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/petImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/aso_tester"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/corners" />
+
+    <TextView
+        android:id="@+id/petName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hudas"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/petImage"
+        app:layout_constraintTop_toTopOf="@+id/petImage" />
+
+    <TextView
+        android:id="@+id/petCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aso"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/petName"
+        app:layout_constraintTop_toBottomOf="@+id/petName" />
+
+    <TextView
+        android:id="@+id/petPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On May 22 3-4pm"
+        android:textSize="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/petLocation"
+        app:layout_constraintStart_toStartOf="@+id/petLocation" />
+
+    <TextView
+        android:id="@+id/petLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="East Cos. Downtown"
+        android:textSize="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/petImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

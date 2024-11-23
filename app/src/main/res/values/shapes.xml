@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="corners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5%</item> <!-- Adjust this value for desired roundness -->
+    </style>
+
+    <style name="circle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Adjust this value for desired roundness -->
+    </style>
+
+    <style name="bottom_only" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+    </style>
+
+    <style name="day">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item> <!-- Adjust this value for desired roundness -->
+    </style>
+
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <!-- Home Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homebtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/petsbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/home_icon"
+            app:layout_constraintBottom_toTopOf="@+id/hometxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hometxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/home"
+            app:layout_constraintStart_toStartOf="@+id/home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Pets Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/petsbtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/inboxbtn"
+        app:layout_constraintStart_toEndOf="@+id/homebtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/pets"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/pets_icon"
+            app:layout_constraintBottom_toTopOf="@+id/petstxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/petstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="My Post"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/pets"
+            app:layout_constraintStart_toStartOf="@+id/pets" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Inbox Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inboxbtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/profilebtn"
+        app:layout_constraintStart_toEndOf="@+id/petsbtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/inbox"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/inbox_icon"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/inboxtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Chats"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/inbox"
+            app:layout_constraintStart_toStartOf="@+id/inbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Profile Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profilebtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inboxbtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/profile_icon"
+            app:layout_constraintBottom_toTopOf="@+id/profiletxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profiletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/profile"
+            app:layout_constraintStart_toStartOf="@+id/profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
