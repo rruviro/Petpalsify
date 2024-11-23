@@ -253,11 +253,11 @@
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/signup"
+                        android:id="@+id/login"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="signup"
+                        android:text="Login"
                         android:textColor="@color/primary_color"
                         android:textSize="14dp"
                         android:textStyle="bold"

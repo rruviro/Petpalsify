@@ -94,6 +94,12 @@
         <action
             android:id="@+id/action_chatsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_myPostFragment"
+            app:destination="@id/myPostFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/convoFragment"
@@ -101,12 +107,16 @@
         android:label="fragment_convo"
         tools:layout="@layout/fragment_convo" >
         <action
-            android:id="@+id/action_convoFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_convoFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
     </fragment>
     <fragment
         android:id="@+id/informationFragment"
         android:name="com.doctorblue.petpalsify.InformationFragment"
         android:label="fragment_information"
-        tools:layout="@layout/fragment_information" />
+        tools:layout="@layout/fragment_information" >
+        <action
+            android:id="@+id/action_informationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
