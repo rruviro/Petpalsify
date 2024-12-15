@@ -4,10 +4,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    android:background="#F5F5F5"
     tools:context=".ProfileFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileCover"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/primary_color"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/corners" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-80dp"
+        android:background="@color/primary_color"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/profileCover"
+        app:layout_constraintStart_toStartOf="@+id/profileCover"
+        app:layout_constraintTop_toBottomOf="@+id/profileCover"
+        app:shapeAppearanceOverlay="@style/circle" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:maxEms="12"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/name">
+
+        <TextView
+            android:id="@+id/editProfile"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/curve"
+            android:backgroundTint="#D8D8D8"
+            android:gravity="center"
+            android:text="Edit profile"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/curve"
+            android:backgroundTint="#D8D8D8"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editProfile"
+            app:layout_constraintStart_toEndOf="@+id/editProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:backgroundTint="@color/primary_color"
+            android:background="@drawable/logout_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/logout"
+            app:layout_constraintEnd_toEndOf="@+id/logout"
+            app:layout_constraintStart_toStartOf="@+id/logout"
+            app:layout_constraintTop_toTopOf="@+id/logout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="Adaptor"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout13"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout12"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout12"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myadapt"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/curve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/totalPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="90dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Post"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="@+id/totalPost"
+                    app:layout_constraintStart_toStartOf="@+id/totalPost"
+                    app:layout_constraintTop_toBottomOf="@+id/totalPost" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout11"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#E1FFFFFF"
@@ -24,10 +187,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <include android:id="@+id/bottom_navigation"  layout="@layout/bottom_navigation" />
+            <include
+                android:id="@+id/bottom_navigation"
+                layout="@layout/bottom_navigation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

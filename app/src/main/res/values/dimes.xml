@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="text_size_large">4dp</dimen>
+    <dimen name="text_size_normal">13sp</dimen>
+</resources>

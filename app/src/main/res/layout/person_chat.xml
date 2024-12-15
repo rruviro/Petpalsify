@@ -2,52 +2,69 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="50dp"
     android:layout_marginBottom="10dp"
-    android:background="@color/white">
+    android:background="#F5F5F5"
+    android:id="@+id/otherUser">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/shapeableImageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/profileImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
         android:background="@color/primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/circle" />
 
-    <TextView
-        android:id="@+id/userName"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shane Martinez"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
-        app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/profileImage">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shane Martinez"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:maxEms="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/currentChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello world!"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:maxLines="1"
+            android:maxEms="7"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@+id/userName"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/duration"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5 min"
-        android:textColor="@color/black"
-        android:textSize="11dp"
-        app:layout_constraintBottom_toBottomOf="@+id/userName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/userName" />
-
-    <TextView
-        android:id="@+id/currentChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello world!"
-        android:textColor="@color/black"
-        android:textSize="11dp"
-        app:layout_constraintStart_toStartOf="@+id/userName"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        android:textColor="#80000000"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout8"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

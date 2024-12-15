@@ -2,4 +2,5 @@
     <string name="app_name">Petpalsify</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="underlined_text"><![CDATA[<🐾> All <🐾>]]></string>
 </resources>

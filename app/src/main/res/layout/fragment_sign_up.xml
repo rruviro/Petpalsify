@@ -7,270 +7,267 @@
     android:background="@color/white"
     tools:context=".SignUpFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/Logo"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_marginStart="-50dp"
                 android:src="@drawable/logo"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="-40dp"
+                android:layout_marginLeft="-50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-40dp"
-                android:layout_marginTop="25dp"
-                android:text="New User registration"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/Logo"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/text1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tell us about yourself"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                app:layout_constraintStart_toStartOf="@+id/text"
-                app:layout_constraintTop_toBottomOf="@+id/text" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                android:layout_marginLeft="-30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Logo"
+                app:layout_constraintStart_toEndOf="@+id/Logo"
+                app:layout_constraintTop_toTopOf="@+id/Logo">
 
                 <TextView
-                    android:id="@+id/firsthint"
+                    android:id="@+id/text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="First Name"
+                    android:text="New User registration"
                     android:textColor="@color/black"
-                    android:textSize="13dp"
+                    android:textSize="17dp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/firstname"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <EditText
-                    android:id="@+id/firstname"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/searchbar"
-                    android:hint="First Name"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/lasthint"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/lasthint"
+                    android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Last Name"
+                    android:text="Tell us about yourself"
                     android:textColor="@color/black"
                     android:textSize="13dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/lastname"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="@+id/text"
+                    app:layout_constraintTop_toBottomOf="@+id/text" />
 
-                <EditText
-                    android:id="@+id/lastname"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/searchbar"
-                    android:hint="Last Name"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/phonehint"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/phonehint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Phone Number"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/phone"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/firsthint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_marginTop="-20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
-                <EditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/searchbar"
-                    android:hint="Phone number"
-                    android:inputType="number"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/passwordhint"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/searchbar"
+                android:hint="First Name"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/firsthint"
+                app:layout_constraintTop_toBottomOf="@+id/firsthint" />
 
-                <TextView
-                    android:id="@+id/passwordhint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Password"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/username"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/lasthint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/firstname"
+                app:layout_constraintTop_toBottomOf="@+id/firstname" />
 
-                <EditText
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/searchbar"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/comfirmhint"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/searchbar"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="@+id/lasthint"
+                app:layout_constraintTop_toBottomOf="@+id/lasthint" />
 
+            <TextView
+                android:id="@+id/phonehint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastname" />
 
-                <TextView
-                    android:id="@+id/comfirmhint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Confirm Password"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/password"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/searchbar"
+                android:hint="Phone number"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="@+id/phonehint"
+                app:layout_constraintTop_toBottomOf="@+id/phonehint" />
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/searchbar"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/terms"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/passwordhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/phone"
+                app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/searchbar"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/passwordhint"
+                app:layout_constraintTop_toBottomOf="@+id/passwordhint" />
+
+            <TextView
+                android:id="@+id/comfirmhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/password"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/searchbar"
+                android:hint="Confirm assword"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/comfirmhint"
+                app:layout_constraintTop_toBottomOf="@+id/comfirmhint" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/password" />
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="-5dp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
 
                 <TextView
                     android:id="@+id/terms"
-                    android:layout_width="300dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="By Proceedding, I agree that Petpalsify can collect, use and disclose the information provided by me in accordance with the Privacy Notice and I fully comply with Terms and Conditions which I have read the understand."
-                    android:textSize="10dp"
+                    android:text="By Proceeding, I agree that Petpalsify can collect, use and disclose the information provided by me in accordance with the Privacy Notice and I fully comply with Terms and Conditions which I have read and understand."
+                    android:textSize="9dp"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toEndOf="@+id/checkBox"
-                    app:layout_constraintTop_toTopOf="@+id/checkBox" />
+                    app:layout_constraintTop_toTopOf="@+id/checkBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox" />
 
                 <Button
                     android:id="@+id/signupbtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginTop="21dp"
-                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="@color/primary_color"
                     android:text="Sign Up"
                     android:textColor="@color/white"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox"
                     app:layout_constraintTop_toBottomOf="@+id/terms" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signupbtn">
+
+                <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account ?"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Already have an account ?"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/login"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="Login"
-                        android:textColor="@color/primary_color"
-                        android:textSize="14dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView3"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@color/primary_color"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="@+id/textView3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

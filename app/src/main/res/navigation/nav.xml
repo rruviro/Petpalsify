@@ -67,6 +67,18 @@
         <action
             android:id="@+id/action_profileFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myPostFragment"
+            app:destination="@id/myPostFragment" />
+        <action
+            android:id="@+id/action_profileFragment_self"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -85,6 +97,18 @@
         <action
             android:id="@+id/action_myPostFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_myPostFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_myPostFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+        <action
+            android:id="@+id/action_myPostFragment_to_petProfilesFragment"
+            app:destination="@id/petProfileFragment" />
+        <action
+            android:id="@+id/action_myPostFragment_to_managePetFragment"
+            app:destination="@id/managePetFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatsFragment"
@@ -100,6 +124,9 @@
         <action
             android:id="@+id/action_chatsFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_convoFragment"
+            app:destination="@id/convoFragment" />
     </fragment>
     <fragment
         android:id="@+id/convoFragment"
@@ -118,5 +145,26 @@
         <action
             android:id="@+id/action_informationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_convoFragment"
+            app:destination="@id/convoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petProfileFragment"
+        android:name="com.doctorblue.petpalsify.PetProfileFragment"
+        android:label="fragment_pet_profile"
+        tools:layout="@layout/fragment_pet_profile" >
+        <action
+            android:id="@+id/action_petProfileFragment_to_myPostFragment"
+            app:destination="@id/myPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managePetFragment"
+        android:name="com.doctorblue.petpalsify.ManagePetFragment"
+        android:label="fragment_manage_pet"
+        tools:layout="@layout/fragment_manage_pet" >
+        <action
+            android:id="@+id/action_managePetFragment_to_myPostFragment"
+            app:destination="@id/myPostFragment" />
     </fragment>
 </navigation>
